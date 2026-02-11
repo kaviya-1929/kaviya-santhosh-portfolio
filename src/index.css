@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Dark tech-focused design system for Kaviya Santhosh Portfolio */
+/* Dark tech-focused design system – COLORFUL EDITION */
 
 @layer base {
   :root {
@@ -24,7 +24,7 @@
     --muted: 220 15% 15%;
     --muted-foreground: 215 15% 55%;
 
-    --accent: 174 60% 40%;
+    --accent: 270 70% 60%;
     --accent-foreground: 210 20% 95%;
 
     --destructive: 0 84.2% 60.2%;
@@ -49,6 +49,14 @@
     --glow: 174 72% 50%;
     --surface: 222 18% 12%;
     --surface-hover: 222 18% 16%;
+
+    /* Multi-color accents */
+    --cyan: 174 72% 50%;
+    --purple: 270 70% 60%;
+    --pink: 330 80% 60%;
+    --orange: 25 95% 55%;
+    --blue: 210 90% 55%;
+    --green: 150 70% 45%;
   }
 }
 
@@ -77,32 +85,128 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(220 15% 25%);
+  background: linear-gradient(180deg, hsl(174 72% 50%), hsl(270 70% 60%));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(174 72% 50%);
+  background: linear-gradient(180deg, hsl(174 72% 60%), hsl(270 70% 70%));
 }
 
 /* Code-inspired grid background */
 .grid-bg {
   background-image: 
-    linear-gradient(rgba(20, 184, 166, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(20, 184, 166, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(20, 184, 166, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 184, 166, 0.04) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
 /* Glow effects */
 .glow-teal {
-  box-shadow: 0 0 20px hsl(174 72% 50% / 0.15), 0 0 60px hsl(174 72% 50% / 0.05);
+  box-shadow: 0 0 20px hsl(174 72% 50% / 0.2), 0 0 60px hsl(174 72% 50% / 0.08);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px hsl(270 70% 60% / 0.2), 0 0 60px hsl(270 70% 60% / 0.08);
+}
+
+.glow-pink {
+  box-shadow: 0 0 20px hsl(330 80% 60% / 0.2), 0 0 60px hsl(330 80% 60% / 0.08);
 }
 
 .glow-text {
-  text-shadow: 0 0 40px hsl(174 72% 50% / 0.3);
+  text-shadow: 0 0 40px hsl(174 72% 50% / 0.4);
+}
+
+/* Rainbow gradient border on hover */
+.rainbow-border {
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.rainbow-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, hsl(174 72% 50%), hsl(270 70% 60%), hsl(330 80% 60%), hsl(25 95% 55%));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.rainbow-border:hover::before {
+  opacity: 1;
+}
+
+/* Colorful card hover lift */
+.card-hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px hsl(174 72% 50% / 0.12), 0 4px 12px hsl(270 70% 60% / 0.08);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, hsl(174 72% 55%), hsl(270 70% 65%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-warm {
+  background: linear-gradient(135deg, hsl(330 80% 60%), hsl(25 95% 55%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradient background */
+.animated-gradient-bg {
+  background: linear-gradient(135deg, 
+    hsl(174 72% 50% / 0.08), 
+    hsl(270 70% 60% / 0.06), 
+    hsl(330 80% 60% / 0.04),
+    hsl(174 72% 50% / 0.08)
+  );
+  background-size: 300% 300%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Section fade-in animation base */
 .section-container {
   @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Interactive touch ripple */
+.touch-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.touch-ripple::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), hsl(174 72% 50% / 0.15), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.touch-ripple:hover::after {
+  opacity: 1;
 }
