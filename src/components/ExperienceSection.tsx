@@ -56,6 +56,18 @@ const experiences: ExperienceItem[] = [
       },
     ],
   },
+  {
+    company: "Sanjith Controls",
+    roles: [
+      {
+        title: "Internship in Starter Manufacturing",
+        period: "Internship",
+        bullets: [
+          "Completed a starter manufacturing internship, gaining hands-on experience in production processes and industry practices",
+        ],
+      },
+    ],
+  },
 ];
 
 const fadeInUp = {

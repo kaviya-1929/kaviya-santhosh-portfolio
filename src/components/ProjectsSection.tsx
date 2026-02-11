@@ -12,6 +12,22 @@ const projects = [
     github: "#",
     live: null,
   },
+  {
+    title: "Buck Booster Converter",
+    description:
+      "Designed and implemented a buck-boost converter circuit for efficient voltage regulation in electronic devices.",
+    tech: ["Circuit Design", "Electronics", "Voltage Regulation"],
+    github: null,
+    live: null,
+  },
+  {
+    title: "Home Automation",
+    description:
+      "Implemented a home automation system using voice recognition technology, enabling users to control various devices and appliances with voice commands.",
+    tech: ["IoT", "Voice Recognition", "Automation"],
+    github: null,
+    live: null,
+  },
 ];
 
 const fadeInUp = {
@@ -90,17 +106,6 @@ const ProjectsSection = () => {
             </motion.div>
           ))}
 
-          {/* Placeholder for future projects */}
-          <motion.div {...fadeInUp} transition={{ duration: 0.6, delay: 0.2 }}>
-            <Card className="bg-card/50 border-dashed border-border h-full flex items-center justify-center min-h-[250px]">
-              <CardContent className="p-6 text-center">
-                <div className="text-3xl mb-3">🚀</div>
-                <p className="text-muted-foreground text-sm font-mono">
-                  More projects coming soon...
-                </p>
-              </CardContent>
-            </Card>
-          </motion.div>
         </div>
       </div>
     </section>
