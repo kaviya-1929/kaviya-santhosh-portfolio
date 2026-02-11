@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import profileImg from "@/assets/profile.jpg";
 
 const HeroSection = () => {
   const scrollTo = (id: string) => {
@@ -123,10 +124,11 @@ const HeroSection = () => {
               <div className="absolute inset-2 rounded-full border-2 border-primary/30" />
               {/* Photo container */}
               <div className="absolute inset-4 rounded-full bg-surface overflow-hidden flex items-center justify-center border border-border">
-                <div className="text-center">
-                  <p className="text-5xl mb-2">👨‍💻</p>
-                  <p className="text-xs text-muted-foreground font-mono">profile.jpg</p>
-                </div>
+                <img
+                  src={profileImg}
+                  alt="Kaviya Santhosh"
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* Corner accents */}
               <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-primary/50 rounded-tr-lg" />

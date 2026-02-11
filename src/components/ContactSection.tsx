@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Mail, Phone, Linkedin, Send, Loader2 } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -74,8 +75,16 @@ const ContactSection = () => {
 
     setIsSubmitting(true);
     try {
-      // TODO: Wire up to Cloud edge function
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      await emailjs.send(
+        "service_12l0ytn",
+        "template_q9i78ei",
+        {
+          from_name: result.data.name,
+          from_email: result.data.email,
+          message: result.data.message,
+        },
+        "iHeZufHB9KL_KV54v"
+      );
       toast({
         title: "Message sent!",
         description: "Thanks for reaching out. I'll get back to you soon.",
