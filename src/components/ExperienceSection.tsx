@@ -30,7 +30,7 @@ const experiences: ExperienceItem[] = [
         title: "Software Development Engineer",
         period: "Jul 2024 – Sep 2025",
         description:
-          "Built and shipped core product features as microservices using Java, Hibernate, and J2EE. Led the refactoring of legacy APIs, reducing response times and significantly improving long-term maintainability of the codebase. Strengthened delivery quality through unit testing, thorough code reviews, and active ownership within Agile development cycles.",
+          "Developed and delivered core backend features as microservices using Java, Hibernate, and J2EE, contributing to key modules of the enterprise CX platform. Refactored legacy APIs, significantly improving response times and reducing technical debt. Worked on integrating communication services within the CRM, streamlining customer interaction workflows across messaging and support channels. Improved code quality and system reliability through structured unit testing, peer code reviews, and consistent delivery within development cycles.",
         skills: ["Java", "Hibernate", "J2EE", "REST APIs", "Unit Testing"],
       },
       {
