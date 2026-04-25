@@ -1,165 +1,110 @@
 import { motion } from "framer-motion";
-import { Briefcase, Calendar } from "lucide-react";
 
-interface ExperienceItem {
+interface Role {
+  title: string;
   company: string;
-  color: string;
-  dotColor: string;
-  roles: {
-    title: string;
-    period: string;
-    description: string;
-    skills: string[];
-  }[];
+  period: string;
+  description: string;
+  tech: string[];
 }
 
-const experiences: ExperienceItem[] = [
+const roles: Role[] = [
   {
+    title: "Software Development Engineer – II",
     company: "Kapture CX",
-    color: "text-primary",
-    dotColor: "bg-primary/30 border-primary",
-    roles: [
-      {
-        title: "Software Development Engineer – II",
-        period: "Oct 2025 – Jan 2026",
-        description:
-          "Designed and scaled microservices using Java and Spring Boot for a high-traffic enterprise customer experience platform serving real-time user interactions. Improved API latency, throughput, and system reliability across critical services, ensuring stable performance under sustained load. Led integrations with external communication systems including Meta WhatsApp Business APIs, telephony (call) services, and email platforms within the CRM ecosystem, enabling seamless omnichannel customer engagement. Built and enhanced chatbot-driven automation workflows, reducing manual intervention and improving response efficiency. Owned end-to-end resolution of P0/P1 production incidents by identifying root causes, implementing fixes, and restoring services with minimal downtime.",
-        skills: ["Java", "Spring Boot", "Microservices", "REST APIs", "Performance Optimization"],
-      },
-      {
-        title: "Software Development Engineer",
-        period: "Jul 2024 – Sep 2025",
-        description:
-          "Developed and delivered core backend features as microservices using Java, Hibernate, and J2EE, contributing to key modules of the enterprise CX platform. Refactored legacy APIs, significantly improving response times and reducing technical debt. Worked on integrating communication services within the CRM, streamlining customer interaction workflows across messaging and support channels. Improved code quality and system reliability through structured unit testing, peer code reviews, and consistent delivery within development cycles.",
-        skills: ["Java", "Hibernate", "J2EE", "REST APIs", "Unit Testing"],
-      },
-      {
-        title: "Software Development Engineer Trainee",
-        period: "Jul 2023 – Jul 2024",
-        description:
-          "Developed Spring Boot backend services powering customer experience workflows in production. Debugged and stabilized REST APIs to improve system uptime and reliability. Collaborated closely with frontend teams and gained hands-on experience with ReactJS, integrating backend services into user-facing interfaces to deliver smoother end-to-end functionality.",
-        skills: ["Java", "Spring Boot", "REST APIs", "Debugging", "ReactJS"],
-      },
-    ],
+    period: "Oct 2025 — Present",
+    description:
+      "Designing and scaling microservices for a high-traffic enterprise CX platform serving real-time interactions. Lead integrations across Meta WhatsApp Business APIs, telephony, and email within the CRM, plus chatbot-driven automation that removes manual work. Own end-to-end resolution of P0/P1 production incidents — root cause, fix, and recovery with minimal downtime.",
+    tech: ["Java", "Spring Boot", "Microservices", "REST", "WhatsApp API", "Telephony", "CRM"],
   },
   {
+    title: "Software Development Engineer",
+    company: "Kapture CX",
+    period: "Jul 2024 — Sep 2025",
+    description:
+      "Built core backend modules as microservices using Java, Hibernate, and J2EE. Refactored legacy APIs to cut response times and reduce technical debt, and streamlined customer interaction workflows across messaging and support channels through CRM integrations. Improved code quality through structured unit testing and consistent peer reviews.",
+    tech: ["Java", "Hibernate", "J2EE", "REST APIs", "MySQL", "Unit Testing"],
+  },
+  {
+    title: "Software Development Engineer Trainee",
+    company: "Kapture CX",
+    period: "Jul 2023 — Jul 2024",
+    description:
+      "Developed Spring Boot services powering customer experience workflows in production. Stabilized REST APIs to lift uptime and partnered with frontend teams using ReactJS to ship smoother end-to-end functionality.",
+    tech: ["Java", "Spring Boot", "REST APIs", "ReactJS", "Debugging"],
+  },
+  {
+    title: "IoT Intern",
     company: "Sai Incubation Center",
-    color: "text-accent",
-    dotColor: "bg-accent/30 border-accent",
-    roles: [
-      {
-        title: "IoT Intern",
-        period: "Dec 2022",
-        description:
-          "Engineered automation and monitoring solutions on embedded systems. Designed sensor data pipelines that powered real-time dashboards, enabling efficient tracking and analysis of system performance.",
-        skills: ["IoT", "Embedded Systems", "Data Pipelines", "Automation"],
-      },
-    ],
+    period: "Dec 2022",
+    description:
+      "Engineered automation and monitoring solutions on embedded systems. Designed sensor data pipelines that powered real-time dashboards for system performance.",
+    tech: ["IoT", "Embedded Systems", "Data Pipelines"],
   },
   {
+    title: "Internship — Starter Manufacturing",
     company: "Sanjith Controls",
-    color: "text-[hsl(330_80%_60%)]",
-    dotColor: "bg-[hsl(330_80%_60%/0.3)] border-[hsl(330_80%_60%)]",
-    roles: [
-      {
-        title: "Internship – Starter Manufacturing",
-        period: "Internship",
-        description:
-          "Gained hands-on exposure to manufacturing processes and industrial workflows, building a practical understanding of real-world production systems and operational efficiency.",
-        skills: ["Manufacturing Processes", "Industrial Workflows"],
-      },
-    ],
+    period: "Internship",
+    description:
+      "Hands-on exposure to manufacturing processes and industrial workflows, building a practical understanding of real-world production systems.",
+    tech: ["Manufacturing", "Industrial Workflows"],
   },
 ];
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
+const fadeUp = {
+  initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-50px" },
-  transition: { duration: 0.6 },
+  viewport: { once: true, margin: "-60px" },
+  transition: { duration: 0.6, ease: [0.2, 0.8, 0.2, 1] as [number, number, number, number] },
 };
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="py-20 lg:py-28">
+    <section id="experience" className="py-24 lg:py-32 relative">
       <div className="section-container">
-        <motion.div {...fadeInUp} className="mb-12">
-          <p className="text-primary font-mono text-sm mb-2">// Experience</p>
-          <h2 className="text-3xl sm:text-4xl font-bold">
-            <span className="gradient-text">Work History</span>
+        <motion.div {...fadeUp} className="mb-16 max-w-2xl">
+          <div className="eyebrow mb-4">Experience</div>
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-[-0.02em] gradient-text">
+            Where I've{" "}
+            <span className="font-serif-display italic accent-text font-normal">shipped.</span>
           </h2>
-          <div className="h-1 w-16 bg-gradient-to-r from-primary to-accent mt-4 rounded-full" />
         </motion.div>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Gradient vertical line */}
-          <div className="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-accent to-[hsl(330_80%_60%)]" />
-
-          <div className="space-y-12">
-            {experiences.map((exp, expIdx) => (
-              <motion.div
-                key={exp.company}
-                {...fadeInUp}
-                transition={{ duration: 0.6, delay: expIdx * 0.15 }}
-              >
-                {/* Company name */}
-                <div className="flex items-center gap-3 mb-6 pl-10 md:pl-16">
-                  <Briefcase className={`w-5 h-5 ${exp.color}`} />
-                  <h3 className={`text-xl font-bold ${exp.color}`}>{exp.company}</h3>
+        <div className="space-y-px bg-border rounded-2xl overflow-hidden border border-border">
+          {roles.map((role, i) => (
+            <motion.article
+              key={`${role.company}-${role.title}`}
+              {...fadeUp}
+              transition={{ ...fadeUp.transition, delay: Math.min(i * 0.06, 0.3) }}
+              className="group bg-card hover:bg-surface transition-colors p-6 sm:p-8 grid lg:grid-cols-12 gap-4 lg:gap-8"
+            >
+              {/* Period */}
+              <div className="lg:col-span-3 flex lg:flex-col items-baseline lg:items-start gap-3 lg:gap-1">
+                <div className="text-[11px] font-mono uppercase tracking-[0.18em] text-muted-foreground">
+                  {role.period}
                 </div>
+                <div className="text-xs font-mono text-primary/80 lg:mt-1">{role.company}</div>
+              </div>
 
-                {/* Roles */}
-                <div className="space-y-6">
-                  {exp.roles.map((role, roleIdx) => (
-                    <motion.div
-                      key={roleIdx}
-                      className="relative pl-10 md:pl-16"
-                      whileHover={{ x: 4 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      {/* Timeline dot */}
-                      <div className={`absolute left-2.5 md:left-6.5 top-1.5 w-3 h-3 rounded-full ${exp.dotColor} border-2`} />
+              {/* Body */}
+              <div className="lg:col-span-9">
+                <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground group-hover:accent-text transition-all">
+                  {role.title}
+                </h3>
+                <p className="mt-3 text-[15px] text-muted-foreground leading-relaxed">
+                  {role.description}
+                </p>
 
-                      <div className="p-5 sm:p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300 card-hover-lift">
-                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
-                          <h4 className="font-semibold text-foreground">
-                            {role.title}
-                          </h4>
-                          <span className="flex items-center gap-1.5 text-xs font-mono text-muted-foreground bg-secondary px-3 py-1 rounded-full w-fit">
-                            <Calendar size={12} />
-                            {role.period}
-                          </span>
-                        </div>
-
-                        <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                          {role.description}
-                        </p>
-
-                        <div>
-                          <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground/70 mb-2">
-                            Skills
-                          </p>
-                          <div className="flex flex-wrap gap-2">
-                            {role.skills.map((skill) => (
-                              <motion.span
-                                key={skill}
-                                whileHover={{ scale: 1.06, y: -1 }}
-                                whileTap={{ scale: 0.96 }}
-                                className={`text-xs font-mono px-2.5 py-1 rounded-md bg-secondary border border-border ${exp.color} hover:border-primary/40 transition-all duration-200 cursor-default`}
-                              >
-                                {skill}
-                              </motion.span>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {role.tech.map((t) => (
+                    <span key={t} className="chip">
+                      {t}
+                    </span>
                   ))}
                 </div>
-              </motion.div>
-            ))}
-          </div>
+              </div>
+            </motion.article>
+          ))}
         </div>
       </div>
     </section>

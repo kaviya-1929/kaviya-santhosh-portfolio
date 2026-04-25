@@ -1,100 +1,71 @@
 import { motion } from "framer-motion";
-import {
-  Code2, Server, Database, Globe, Layout, FileCode, Cpu,
-  Terminal, Zap, Bug, Users, Workflow,
-} from "lucide-react";
 
-const primarySkills = [
-  { name: "Java", icon: Code2, color: "from-[hsl(25_95%_55%)] to-[hsl(15_90%_50%)]", glow: "hover:shadow-[0_0_25px_hsl(25_95%_55%/0.3)]" },
-  { name: "Spring Boot", icon: Server, color: "from-[hsl(150_70%_45%)] to-[hsl(160_60%_40%)]", glow: "hover:shadow-[0_0_25px_hsl(150_70%_45%/0.3)]" },
-  { name: "REST APIs", icon: Globe, color: "from-primary to-[hsl(200_80%_50%)]", glow: "hover:shadow-[0_0_25px_hsl(174_72%_50%/0.3)]" },
-  { name: "Microservices", icon: Cpu, color: "from-accent to-[hsl(290_70%_60%)]", glow: "hover:shadow-[0_0_25px_hsl(270_70%_60%/0.3)]" },
+const groups = [
+  {
+    label: "Backend",
+    items: ["Java", "Spring Boot", "Hibernate", "J2EE", "REST APIs", "Microservices"],
+  },
+  {
+    label: "Databases",
+    items: ["MySQL", "SQL"],
+  },
+  {
+    label: "Frontend",
+    items: ["ReactJS", "HTML", "CSS"],
+  },
+  {
+    label: "Practices",
+    items: ["Performance Optimization", "Production Debugging", "Unit Testing", "Code Review"],
+  },
 ];
 
-const additionalSkills = [
-  { name: "Hibernate", icon: Server, color: "text-[hsl(150_70%_45%)]" },
-  { name: "J2EE", icon: Code2, color: "text-[hsl(25_95%_55%)]" },
-  { name: "ReactJS", icon: Layout, color: "text-[hsl(210_90%_55%)]" },
-  { name: "HTML", icon: FileCode, color: "text-[hsl(25_95%_55%)]" },
-  { name: "CSS", icon: FileCode, color: "text-[hsl(210_90%_55%)]" },
-  { name: "MySQL", icon: Database, color: "text-[hsl(200_80%_50%)]" },
-  { name: "SQL", icon: Database, color: "text-primary" },
-  { name: "Performance Optimization", icon: Zap, color: "text-[hsl(25_95%_55%)]" },
-  { name: "Production Debugging", icon: Bug, color: "text-[hsl(330_80%_60%)]" },
-];
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
+const fadeUp = {
+  initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-50px" },
-  transition: { duration: 0.6 },
+  viewport: { once: true, margin: "-80px" },
+  transition: { duration: 0.6, ease: [0.2, 0.8, 0.2, 1] as [number, number, number, number] },
 };
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="py-20 lg:py-28 grid-bg">
+    <section id="skills" className="py-24 lg:py-32 relative">
       <div className="section-container">
-        <motion.div {...fadeInUp} className="mb-12">
-          <p className="text-primary font-mono text-sm mb-2">// Skills</p>
-          <h2 className="text-3xl sm:text-4xl font-bold">
-            <span className="gradient-text">Tech Stack</span>
-          </h2>
-          <div className="h-1 w-16 bg-gradient-to-r from-primary to-accent mt-4 rounded-full" />
-        </motion.div>
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
+          <motion.div {...fadeUp} className="lg:col-span-4">
+            <div className="lg:sticky lg:top-28">
+              <div className="eyebrow mb-4">Toolkit</div>
+              <h2 className="text-4xl sm:text-5xl font-bold tracking-[-0.02em] gradient-text">
+                Stack I{" "}
+                <span className="font-serif-display italic accent-text font-normal">trust.</span>
+              </h2>
+              <p className="mt-5 text-sm text-muted-foreground leading-relaxed max-w-sm">
+                Tools and practices I reach for daily to ship reliable backend systems.
+              </p>
+            </div>
+          </motion.div>
 
-        {/* Primary Skills */}
-        <motion.div {...fadeInUp} transition={{ duration: 0.6, delay: 0.1 }}>
-          <h3 className="text-sm font-mono text-primary mb-4 uppercase tracking-wider">
-            Core Technologies
-          </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
-            {primarySkills.map((skill, i) => (
+          <div className="lg:col-span-8 space-y-8">
+            {groups.map((g, i) => (
               <motion.div
-                key={skill.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
-                whileHover={{ scale: 1.06, y: -4 }}
-                whileTap={{ scale: 0.97 }}
-                className={`group relative p-5 rounded-xl bg-card border border-border hover:border-transparent transition-all duration-300 text-center cursor-default rainbow-border ${skill.glow}`}
+                key={g.label}
+                {...fadeUp}
+                transition={{ ...fadeUp.transition, delay: Math.min(i * 0.08, 0.3) }}
+                className="grid sm:grid-cols-12 gap-4 pb-8 border-b border-border last:border-0"
               >
-                <div className={`mb-3 flex justify-center`}>
-                  <div className={`p-2 rounded-lg bg-gradient-to-br ${skill.color} bg-clip-padding`}>
-                    <skill.icon className="w-7 h-7 text-white" />
-                  </div>
+                <div className="sm:col-span-3 text-xs font-mono uppercase tracking-[0.18em] text-muted-foreground pt-1">
+                  {g.label}
                 </div>
-                <p className="font-medium text-foreground text-sm">{skill.name}</p>
+                <div className="sm:col-span-9 flex flex-wrap gap-2">
+                  {g.items.map((it) => (
+                    <span key={it} className="chip">
+                      {it}
+                    </span>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
-        </motion.div>
-
-        {/* Additional Skills */}
-        <motion.div {...fadeInUp} transition={{ duration: 0.6, delay: 0.2 }}>
-          <h3 className="text-sm font-mono text-primary mb-4 uppercase tracking-wider">
-            Additional Skills
-          </h3>
-          <div className="flex flex-wrap gap-3">
-            {additionalSkills.map((skill, i) => (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: i * 0.05 }}
-                whileHover={{ scale: 1.08, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-card border border-border hover:border-primary/30 transition-all duration-300 group cursor-default hover:shadow-lg hover:shadow-primary/5"
-              >
-                <skill.icon className={`w-4 h-4 ${skill.color} transition-all duration-300 group-hover:scale-110`} />
-                <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                  {skill.name}
-                </span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
