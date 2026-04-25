@@ -23,14 +23,14 @@ const experiences: ExperienceItem[] = [
         title: "Software Development Engineer – II",
         period: "Oct 2025 – Jan 2026",
         description:
-          "Architected and developed scalable microservices in Java and Spring Boot for a high-traffic enterprise customer experience platform. Drove measurable improvements in latency, throughput, and reliability across critical APIs, ensuring consistent performance under heavy load. Owned the resolution of P0 and P1 production incidents end-to-end — quickly identifying root causes and restoring services with minimal downtime to keep the platform stable for enterprise customers.",
+          "Designed and scaled microservices using Java and Spring Boot for a high-traffic enterprise customer experience platform serving real-time user interactions. Improved API latency, throughput, and system reliability across critical services, ensuring stable performance under sustained load. Led integrations with external communication systems including Meta WhatsApp Business APIs, telephony (call) services, and email platforms within the CRM ecosystem, enabling seamless omnichannel customer engagement. Built and enhanced chatbot-driven automation workflows, reducing manual intervention and improving response efficiency. Owned end-to-end resolution of P0/P1 production incidents by identifying root causes, implementing fixes, and restoring services with minimal downtime.",
         skills: ["Java", "Spring Boot", "Microservices", "REST APIs", "Performance Optimization"],
       },
       {
         title: "Software Development Engineer",
         period: "Jul 2024 – Sep 2025",
         description:
-          "Built and shipped core product features as microservices using Java, Hibernate, and J2EE. Led the refactoring of legacy APIs, reducing response times and significantly improving long-term maintainability of the codebase. Strengthened delivery quality through unit testing, thorough code reviews, and active ownership within Agile development cycles.",
+          "Developed and delivered core backend features as microservices using Java, Hibernate, and J2EE, contributing to key modules of the enterprise CX platform. Refactored legacy APIs, significantly improving response times and reducing technical debt. Worked on integrating communication services within the CRM, streamlining customer interaction workflows across messaging and support channels. Improved code quality and system reliability through structured unit testing, peer code reviews, and consistent delivery within development cycles.",
         skills: ["Java", "Hibernate", "J2EE", "REST APIs", "Unit Testing"],
       },
       {

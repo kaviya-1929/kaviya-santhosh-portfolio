@@ -42,15 +42,21 @@ const AboutSection = () => {
                   </h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  I'm a Software Development Engineer with <span className="text-primary font-medium">2+ years</span> designing
-                  scalable backend systems in Java and Spring Boot. I architect microservices,
-                  craft clean RESTful APIs, and engineer for performance from day one in production.
+                  I'm a backend-focused Software Development Engineer with <span className="text-primary font-medium">2+ years</span> of
+                  experience building and scaling microservices-based systems in production. My core
+                  expertise lies in designing RESTful APIs, optimizing system performance, and
+                  ensuring high availability for enterprise applications.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  I've worked extensively on high-volume API systems — handling performance bottlenecks,
+                  debugging critical incidents, and improving overall reliability. My experience also
+                  spans integrating external communication platforms such as Meta WhatsApp Business APIs,
+                  telephony systems, and email services into CRM platforms, along with building
+                  chatbot-driven workflows that automate and streamline customer interactions.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  My day-to-day spans high-volume API processing, debugging critical production
-                  incidents, and tuning systems for reliability at scale. I write clean,
-                  maintainable code, partner closely with cross-functional teams, and ship
-                  software that businesses can depend on.
+                  I focus on writing clean, maintainable code and building systems that are not only
+                  functional but scalable, resilient, and production-ready.
                 </p>
               </CardContent>
             </Card>
