@@ -23,7 +23,7 @@ const experiences: ExperienceItem[] = [
         title: "Software Development Engineer – II",
         period: "Oct 2025 – Jan 2026",
         description:
-          "Architected and developed scalable microservices in Java and Spring Boot for a high-traffic enterprise customer experience platform. Drove measurable improvements in latency, throughput, and reliability across critical APIs, ensuring consistent performance under heavy load. Owned the resolution of P0 and P1 production incidents end-to-end — quickly identifying root causes and restoring services with minimal downtime to keep the platform stable for enterprise customers.",
+          "Designed and scaled microservices using Java and Spring Boot for a high-traffic enterprise customer experience platform serving real-time user interactions. Improved API latency, throughput, and system reliability across critical services, ensuring stable performance under sustained load. Led integrations with external communication systems including Meta WhatsApp Business APIs, telephony (call) services, and email platforms within the CRM ecosystem, enabling seamless omnichannel customer engagement. Built and enhanced chatbot-driven automation workflows, reducing manual intervention and improving response efficiency. Owned end-to-end resolution of P0/P1 production incidents by identifying root causes, implementing fixes, and restoring services with minimal downtime.",
         skills: ["Java", "Spring Boot", "Microservices", "REST APIs", "Performance Optimization"],
       },
       {
