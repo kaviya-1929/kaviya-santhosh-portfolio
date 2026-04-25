@@ -1,104 +1,86 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Code2 } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
+const fadeUp = {
+  initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-50px" },
-  transition: { duration: 0.6 },
+  viewport: { once: true, margin: "-80px" },
+  transition: { duration: 0.6, ease: [0.2, 0.8, 0.2, 1] as [number, number, number, number] },
 };
 
-const traitColors = [
-  "from-primary/20 to-[hsl(200_80%_50%/0.2)] text-primary border-primary/30",
-  "from-accent/20 to-[hsl(290_70%_60%/0.2)] text-accent border-accent/30",
-  "from-[hsl(330_80%_60%/0.2)] to-[hsl(350_80%_60%/0.2)] text-[hsl(330_80%_60%)] border-[hsl(330_80%_60%/0.3)]",
-  "from-[hsl(25_95%_55%/0.2)] to-[hsl(40_90%_50%/0.2)] text-[hsl(25_95%_55%)] border-[hsl(25_95%_55%/0.3)]",
+const focusAreas = [
+  { k: "Backend", v: "Java · Spring Boot · Microservices" },
+  { k: "Scale", v: "High-traffic APIs · Performance tuning" },
+  { k: "Integrations", v: "WhatsApp · Call · Email · CRM" },
+  { k: "Reliability", v: "P0/P1 ownership · Production debugging" },
 ];
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 lg:py-28">
+    <section id="about" className="py-24 lg:py-32 relative">
       <div className="section-container">
-        <motion.div {...fadeInUp} className="mb-12">
-          <p className="text-primary font-mono text-sm mb-2">// About Me</p>
-          <h2 className="text-3xl sm:text-4xl font-bold">
-            <span className="gradient-text">Get to know me</span>
-          </h2>
-          <div className="h-1 w-16 bg-gradient-to-r from-primary to-accent mt-4 rounded-full" />
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Summary */}
-          <motion.div {...fadeInUp} transition={{ duration: 0.6, delay: 0.1 }}>
-            <Card className="bg-card border-border h-full rainbow-border card-hover-lift">
-              <CardContent className="p-6 sm:p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-[hsl(200_80%_50%/0.1)] text-primary">
-                    <Code2 size={20} />
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground">
-                    Professional Summary
-                  </h3>
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Backend-focused SDE with <span className="text-primary font-medium">2+ years</span> shipping
-                  microservices in production for high-traffic enterprise CX platforms. I design
-                  RESTful APIs, tune performance, and keep critical services reliable under load.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  My day-to-day spans real integrations — Meta WhatsApp Business APIs, telephony,
-                  email, and CRM workflows — plus chatbot automation that removes manual work.
-                  I write clean, maintainable code and own systems end-to-end, from design to P0/P1 resolution.
-                </p>
-              </CardContent>
-            </Card>
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
+          {/* Left — sticky label (asymmetric) */}
+          <motion.div {...fadeUp} className="lg:col-span-4">
+            <div className="lg:sticky lg:top-28">
+              <div className="eyebrow mb-4">About</div>
+              <h2 className="text-4xl sm:text-5xl font-bold tracking-[-0.02em] gradient-text">
+                Engineer focused on{" "}
+                <span className="font-serif-display italic accent-text font-normal">
+                  what ships.
+                </span>
+              </h2>
+            </div>
           </motion.div>
 
-          {/* Education */}
-          <motion.div {...fadeInUp} transition={{ duration: 0.6, delay: 0.2 }}>
-            <Card className="bg-card border-border h-full rainbow-border card-hover-lift">
-              <CardContent className="p-6 sm:p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-gradient-to-br from-accent/20 to-[hsl(290_70%_60%/0.1)] text-accent">
-                    <GraduationCap size={20} />
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground">
-                    Education
-                  </h3>
-                </div>
-                <div className="border border-border rounded-lg p-5 bg-surface animated-gradient-bg">
-                  <h4 className="font-semibold text-foreground mb-1">
-                    Bachelor of Engineering
-                  </h4>
-                  <p className="gradient-text text-sm font-medium mb-2">
-                    Electrical & Electronics Engineering
-                  </p>
-                  <p className="text-muted-foreground text-sm mb-1">
-                    KPR Institute of Engineering and Technology
-                  </p>
-                  <p className="text-muted-foreground text-xs font-mono">
-                    2020 – 2024
-                  </p>
-                </div>
+          {/* Right — narrative + focus grid */}
+          <div className="lg:col-span-8 space-y-10">
+            <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.1 }}>
+              <p className="text-lg text-foreground/90 leading-relaxed">
+                Backend-focused SDE with{" "}
+                <span className="text-foreground font-semibold">2+ years</span> shipping
+                microservices in production for high-traffic enterprise CX platforms. I design
+                RESTful APIs, tune performance, and keep critical services reliable under load.
+              </p>
+              <p className="mt-5 text-base text-muted-foreground leading-relaxed">
+                My day-to-day spans real integrations — Meta WhatsApp Business APIs, telephony,
+                email, and CRM workflows — plus chatbot automation that removes manual work.
+                I write clean, maintainable code and own systems end-to-end, from design through
+                P0/P1 resolution.
+              </p>
+            </motion.div>
 
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {["Problem Solving", "System Design", "Team Player", "Fast Learner"].map(
-                    (trait, i) => (
-                      <motion.span
-                        key={trait}
-                        whileHover={{ scale: 1.08 }}
-                        whileTap={{ scale: 0.95 }}
-                        className={`px-3 py-1 text-xs rounded-full bg-gradient-to-r border cursor-default ${traitColors[i]}`}
-                      >
-                        {trait}
-                      </motion.span>
-                    )
-                  )}
+            <motion.div
+              {...fadeUp}
+              transition={{ ...fadeUp.transition, delay: 0.2 }}
+              className="grid sm:grid-cols-2 gap-px bg-border rounded-2xl overflow-hidden border border-border"
+            >
+              {focusAreas.map((f) => (
+                <div
+                  key={f.k}
+                  className="bg-card p-5 hover:bg-surface transition-colors"
+                >
+                  <div className="text-[11px] font-mono uppercase tracking-[0.18em] text-muted-foreground mb-2">
+                    {f.k}
+                  </div>
+                  <div className="text-sm font-medium text-foreground">{f.v}</div>
                 </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+              ))}
+            </motion.div>
+
+            <motion.div
+              {...fadeUp}
+              transition={{ ...fadeUp.transition, delay: 0.3 }}
+              className="flex items-center gap-4 pt-4 border-t border-border"
+            >
+              <div className="text-xs font-mono uppercase tracking-[0.18em] text-muted-foreground">
+                Education
+              </div>
+              <div className="flex-1 text-sm text-foreground/90">
+                B.E. Electrical &amp; Electronics Engineering — KPR Institute of Engineering &amp; Technology
+              </div>
+              <div className="text-xs font-mono text-muted-foreground hidden sm:block">2020 – 2024</div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
