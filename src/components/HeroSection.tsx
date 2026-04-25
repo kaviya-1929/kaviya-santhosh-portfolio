@@ -83,7 +83,7 @@ const HeroSection = () => {
             >
               <div className="h-px w-8 bg-gradient-to-r from-primary to-accent" />
               <p className="text-lg text-muted-foreground font-medium">
-                Software Development Engineer
+                Software Development Engineer | Backend Systems | Microservices
               </p>
             </motion.div>
 
