@@ -93,9 +93,10 @@ const HeroSection = () => {
               transition={{ delay: 0.6 }}
               className="text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8"
             >
-              I build scalable, high-performance backend systems with Java, Spring Boot,
-              and Microservices. With 2+ years shipping enterprise-grade platforms, I turn
-              complex problems into reliable, production-ready software that scales.
+              I build scalable, production-grade backend systems using Java, Spring Boot,
+              and Microservices. With 2+ years of experience in enterprise CX platforms, I
+              specialize in designing high-throughput APIs, solving production challenges, and
+              delivering systems that remain reliable under real-world scale.
             </motion.p>
 
             <motion.div
