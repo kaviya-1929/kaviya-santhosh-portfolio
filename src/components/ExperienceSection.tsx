@@ -8,7 +8,8 @@ interface ExperienceItem {
   roles: {
     title: string;
     period: string;
-    bullets: string[];
+    description: string;
+    skills: string[];
   }[];
 }
 
@@ -21,29 +22,23 @@ const experiences: ExperienceItem[] = [
       {
         title: "Software Development Engineer – II",
         period: "Oct 2025 – Jan 2026",
-        bullets: [
-          "Architected scalable Java Spring Boot microservices powering a high-traffic enterprise CX platform",
-          "Drove measurable gains in latency, throughput, and reliability across critical APIs",
-          "Owned resolution of P0/P1 production incidents, restoring service with minimal downtime",
-        ],
+        description:
+          "Architected and developed scalable microservices in Java and Spring Boot for a high-traffic enterprise customer experience platform. Drove measurable improvements in latency, throughput, and reliability across critical APIs, ensuring consistent performance under heavy load. Owned the resolution of P0 and P1 production incidents end-to-end — quickly identifying root causes and restoring services with minimal downtime to keep the platform stable for enterprise customers.",
+        skills: ["Java", "Spring Boot", "Microservices", "REST APIs", "Performance Optimization"],
       },
       {
         title: "Software Development Engineer",
         period: "Jul 2024 – Sep 2025",
-        bullets: [
-          "Shipped core product features as microservices built on Java, Hibernate, and J2EE",
-          "Refactored legacy APIs, cutting response times and significantly improving code maintainability",
-          "Strengthened delivery quality through unit testing, code reviews, and Agile sprint ownership",
-        ],
+        description:
+          "Built and shipped core product features as microservices using Java, Hibernate, and J2EE. Led the refactoring of legacy APIs, reducing response times and significantly improving long-term maintainability of the codebase. Strengthened delivery quality through unit testing, thorough code reviews, and active ownership within Agile development cycles.",
+        skills: ["Java", "Hibernate", "J2EE", "REST APIs", "Unit Testing"],
       },
       {
         title: "Software Development Engineer Trainee",
         period: "Jul 2023 – Jul 2024",
-        bullets: [
-          "Built Spring Boot services for customer experience workflows used in production",
-          "Debugged and stabilized REST APIs, contributing to consistent uptime",
-          "Partnered with cross-functional teams to deliver features on schedule",
-        ],
+        description:
+          "Developed Spring Boot backend services powering customer experience workflows in production. Debugged and stabilized REST APIs to improve system uptime and reliability. Collaborated closely with frontend teams and gained hands-on experience with ReactJS, integrating backend services into user-facing interfaces to deliver smoother end-to-end functionality.",
+        skills: ["Java", "Spring Boot", "REST APIs", "Debugging", "ReactJS"],
       },
     ],
   },
@@ -55,10 +50,9 @@ const experiences: ExperienceItem[] = [
       {
         title: "IoT Intern",
         period: "Dec 2022",
-        bullets: [
-          "Engineered IoT automation and monitoring solutions on embedded platforms",
-          "Designed sensor data pipelines feeding real-time monitoring dashboards",
-        ],
+        description:
+          "Engineered automation and monitoring solutions on embedded systems. Designed sensor data pipelines that powered real-time dashboards, enabling efficient tracking and analysis of system performance.",
+        skills: ["IoT", "Embedded Systems", "Data Pipelines", "Automation"],
       },
     ],
   },
@@ -70,9 +64,9 @@ const experiences: ExperienceItem[] = [
       {
         title: "Internship – Starter Manufacturing",
         period: "Internship",
-        bullets: [
-          "Gained hands-on exposure to production processes and real-world industrial workflows",
-        ],
+        description:
+          "Gained hands-on exposure to manufacturing processes and industrial workflows, building a practical understanding of real-world production systems and operational efficiency.",
+        skills: ["Manufacturing Processes", "Industrial Workflows"],
       },
     ],
   },
@@ -127,7 +121,7 @@ const ExperienceSection = () => {
                       {/* Timeline dot */}
                       <div className={`absolute left-2.5 md:left-6.5 top-1.5 w-3 h-3 rounded-full ${exp.dotColor} border-2`} />
 
-                      <div className="p-5 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300 card-hover-lift">
+                      <div className="p-5 sm:p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300 card-hover-lift">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
                           <h4 className="font-semibold text-foreground">
                             {role.title}
@@ -137,17 +131,28 @@ const ExperienceSection = () => {
                             {role.period}
                           </span>
                         </div>
-                        <ul className="space-y-2">
-                          {role.bullets.map((bullet, i) => (
-                            <li
-                              key={i}
-                              className="text-sm text-muted-foreground flex items-start gap-2"
-                            >
-                              <span className={`mt-1.5 text-xs ${exp.color}`}>▹</span>
-                              {bullet}
-                            </li>
-                          ))}
-                        </ul>
+
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                          {role.description}
+                        </p>
+
+                        <div>
+                          <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground/70 mb-2">
+                            Skills
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            {role.skills.map((skill) => (
+                              <motion.span
+                                key={skill}
+                                whileHover={{ scale: 1.06, y: -1 }}
+                                whileTap={{ scale: 0.96 }}
+                                className={`text-xs font-mono px-2.5 py-1 rounded-md bg-secondary border border-border ${exp.color} hover:border-primary/40 transition-all duration-200 cursor-default`}
+                              >
+                                {skill}
+                              </motion.span>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </motion.div>
                   ))}
