@@ -20,29 +20,29 @@ const experiences: ExperienceItem[] = [
     roles: [
       {
         title: "Software Development Engineer – II",
-        period: "Oct 2025 – Dec 2025",
+        period: "Oct 2025 – Jan 2026",
         bullets: [
-          "Designed and developed scalable Java Spring Boot microservices for enterprise CX platform",
-          "Improved system performance and reliability across high-traffic endpoints",
-          "Resolved high-priority production issues with minimal downtime",
+          "Architected scalable Java Spring Boot microservices powering a high-traffic enterprise CX platform",
+          "Drove measurable gains in latency, throughput, and reliability across critical APIs",
+          "Owned resolution of P0/P1 production incidents, restoring service with minimal downtime",
         ],
       },
       {
         title: "Software Development Engineer",
         period: "Jul 2024 – Sep 2025",
         bullets: [
-          "Built microservices using Java, Hibernate, and J2EE for core product features",
-          "Refactored legacy APIs improving response times and code maintainability",
-          "Added comprehensive unit testing and participated in Agile sprints and code reviews",
+          "Shipped core product features as microservices built on Java, Hibernate, and J2EE",
+          "Refactored legacy APIs, cutting response times and significantly improving code maintainability",
+          "Strengthened delivery quality through unit testing, code reviews, and Agile sprint ownership",
         ],
       },
       {
         title: "Software Development Engineer Trainee",
         period: "Jul 2023 – Jul 2024",
         bullets: [
-          "Developed Spring Boot backend services for customer experience workflows",
-          "Debugged REST APIs and supported production system stability",
-          "Collaborated with cross-functional teams to ship product features on time",
+          "Built Spring Boot services for customer experience workflows used in production",
+          "Debugged and stabilized REST APIs, contributing to consistent uptime",
+          "Partnered with cross-functional teams to deliver features on schedule",
         ],
       },
     ],
@@ -56,8 +56,8 @@ const experiences: ExperienceItem[] = [
         title: "IoT Intern",
         period: "Dec 2022",
         bullets: [
-          "Built IoT automation and monitoring solutions using embedded systems",
-          "Designed sensor data pipelines for real-time monitoring dashboards",
+          "Engineered IoT automation and monitoring solutions on embedded platforms",
+          "Designed sensor data pipelines feeding real-time monitoring dashboards",
         ],
       },
     ],
@@ -68,10 +68,10 @@ const experiences: ExperienceItem[] = [
     dotColor: "bg-[hsl(330_80%_60%/0.3)] border-[hsl(330_80%_60%)]",
     roles: [
       {
-        title: "Internship in Starter Manufacturing",
+        title: "Internship – Starter Manufacturing",
         period: "Internship",
         bullets: [
-          "Completed a starter manufacturing internship, gaining hands-on experience in production processes and industry practices",
+          "Gained hands-on exposure to production processes and real-world industrial workflows",
         ],
       },
     ],
