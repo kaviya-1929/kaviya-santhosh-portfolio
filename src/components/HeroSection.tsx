@@ -83,7 +83,7 @@ const HeroSection = () => {
             >
               <div className="h-px w-8 bg-gradient-to-r from-primary to-accent" />
               <p className="text-lg text-muted-foreground font-medium">
-                Software Development Engineer | Backend Systems | Microservices
+                I build scalable backend systems that handle real-world traffic.
               </p>
             </motion.div>
 
@@ -93,10 +93,9 @@ const HeroSection = () => {
               transition={{ delay: 0.6 }}
               className="text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8"
             >
-              I build scalable, production-grade backend systems using Java, Spring Boot,
-              and Microservices. With 2+ years of experience in enterprise CX platforms, I
-              specialize in designing high-throughput APIs, solving production challenges, and
-              delivering systems that remain reliable under real-world scale.
+              Software Development Engineer with 2+ years building Java and Spring Boot
+              microservices for enterprise CX platforms — designing high-throughput APIs,
+              owning P0/P1 incidents, and shipping integrations that stay reliable in production.
             </motion.p>
 
             <motion.div
@@ -110,7 +109,7 @@ const HeroSection = () => {
                 onClick={() => scrollTo("#projects")}
                 className="glow-teal font-medium bg-gradient-to-r from-primary to-[hsl(200_80%_50%)] hover:from-primary hover:to-[hsl(200_80%_60%)] transition-all duration-300 hover:scale-105 active:scale-95"
               >
-                View Projects
+                View Work
                 <ExternalLink className="ml-2 w-4 h-4" />
               </Button>
               <Button
