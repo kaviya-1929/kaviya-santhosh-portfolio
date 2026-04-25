@@ -101,8 +101,9 @@ const ContactSection = () => {
           {/* Contact info */}
           <motion.div {...fadeInUp} transition={{ duration: 0.6, delay: 0.1 }}>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              I'm open to new opportunities and interesting projects. Whether you
-              have a question or just want to say hi, feel free to reach out!
+              I'm always open to new opportunities, meaningful collaborations, and
+              interesting engineering challenges. Have an idea or just want to connect?
+              Drop a message — I'd love to hear from you.
             </p>
 
             <div className="space-y-4">

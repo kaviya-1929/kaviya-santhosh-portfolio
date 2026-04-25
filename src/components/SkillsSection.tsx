@@ -12,16 +12,15 @@ const primarySkills = [
 ];
 
 const additionalSkills = [
+  { name: "Hibernate", icon: Server, color: "text-[hsl(150_70%_45%)]" },
+  { name: "J2EE", icon: Code2, color: "text-[hsl(25_95%_55%)]" },
   { name: "ReactJS", icon: Layout, color: "text-[hsl(210_90%_55%)]" },
   { name: "HTML", icon: FileCode, color: "text-[hsl(25_95%_55%)]" },
   { name: "CSS", icon: FileCode, color: "text-[hsl(210_90%_55%)]" },
   { name: "MySQL", icon: Database, color: "text-[hsl(200_80%_50%)]" },
   { name: "SQL", icon: Database, color: "text-primary" },
-  { name: "Python", icon: Terminal, color: "text-[hsl(50_90%_50%)]" },
-  { name: "Agile SDLC", icon: Users, color: "text-accent" },
   { name: "Performance Optimization", icon: Zap, color: "text-[hsl(25_95%_55%)]" },
   { name: "Production Debugging", icon: Bug, color: "text-[hsl(330_80%_60%)]" },
-  { name: "CI/CD", icon: Workflow, color: "text-[hsl(150_70%_45%)]" },
 ];
 
 const fadeInUp = {

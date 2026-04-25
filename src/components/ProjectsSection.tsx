@@ -6,25 +6,25 @@ const projects = [
   {
     title: "College Stack-Based Website",
     description:
-      "A web application built using HTML, CSS, and JavaScript with a stack-based workflow system. Focused on efficient data handling and intuitive user interaction patterns.",
+      "A responsive web app implementing a stack-based workflow for clean data handling and an intuitive user experience.",
     tech: ["HTML", "CSS", "JavaScript"],
     github: "#",
     live: null,
     gradient: "from-primary/60 via-[hsl(200_80%_50%/0.4)] to-transparent",
   },
   {
-    title: "Buck Booster Converter",
+    title: "Buck-Boost Converter",
     description:
-      "Designed and implemented a buck-boost converter circuit for efficient voltage regulation in electronic devices.",
+      "Designed a buck-boost converter circuit for efficient voltage regulation, deepening my grasp of circuit design and power management.",
     tech: ["Circuit Design", "Electronics", "Voltage Regulation"],
     github: null,
     live: null,
     gradient: "from-accent/60 via-[hsl(290_70%_60%/0.4)] to-transparent",
   },
   {
-    title: "Home Automation",
+    title: "Home Automation System",
     description:
-      "Implemented a home automation system using voice recognition technology, enabling users to control various devices and appliances with voice commands.",
+      "A voice-controlled smart home solution combining IoT and speech recognition to control devices seamlessly through natural commands.",
     tech: ["IoT", "Voice Recognition", "Automation"],
     github: null,
     live: null,

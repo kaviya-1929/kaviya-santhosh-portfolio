@@ -42,14 +42,15 @@ const AboutSection = () => {
                   </h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  I'm a Software Development Engineer with <span className="text-primary font-medium">2+ years of experience</span> building 
-                  scalable backend systems. I specialize in Java, Spring Boot, and Microservices architecture,
-                  with a strong focus on writing clean, maintainable code.
+                  I'm a Software Development Engineer with <span className="text-primary font-medium">2+ years</span> designing
+                  scalable backend systems in Java and Spring Boot. I architect microservices,
+                  craft clean RESTful APIs, and engineer for performance from day one in production.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  My expertise spans high-volume API processing, production debugging, 
-                  performance optimization, and Agile development. I thrive in collaborative 
-                  environments, working closely with frontend teams to deliver enterprise-grade applications.
+                  My day-to-day spans high-volume API processing, debugging critical production
+                  incidents, and tuning systems for reliability at scale. I write clean,
+                  maintainable code, partner closely with cross-functional teams, and ship
+                  software that businesses can depend on.
                 </p>
               </CardContent>
             </Card>
