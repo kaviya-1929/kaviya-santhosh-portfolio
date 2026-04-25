@@ -42,21 +42,14 @@ const AboutSection = () => {
                   </h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  I'm a backend-focused Software Development Engineer with <span className="text-primary font-medium">2+ years</span> of
-                  experience building and scaling microservices-based systems in production. My core
-                  expertise lies in designing RESTful APIs, optimizing system performance, and
-                  ensuring high availability for enterprise applications.
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  I've worked extensively on high-volume API systems — handling performance bottlenecks,
-                  debugging critical incidents, and improving overall reliability. My experience also
-                  spans integrating external communication platforms such as Meta WhatsApp Business APIs,
-                  telephony systems, and email services into CRM platforms, along with building
-                  chatbot-driven workflows that automate and streamline customer interactions.
+                  Backend-focused SDE with <span className="text-primary font-medium">2+ years</span> shipping
+                  microservices in production for high-traffic enterprise CX platforms. I design
+                  RESTful APIs, tune performance, and keep critical services reliable under load.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  I focus on writing clean, maintainable code and building systems that are not only
-                  functional but scalable, resilient, and production-ready.
+                  My day-to-day spans real integrations — Meta WhatsApp Business APIs, telephony,
+                  email, and CRM workflows — plus chatbot automation that removes manual work.
+                  I write clean, maintainable code and own systems end-to-end, from design to P0/P1 resolution.
                 </p>
               </CardContent>
             </Card>
