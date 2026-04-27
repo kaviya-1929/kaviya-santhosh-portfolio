@@ -6,12 +6,14 @@ import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import BackgroundOrbs from "@/components/BackgroundOrbs";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="relative min-h-screen bg-background text-foreground">
+      <BackgroundOrbs />
       <Navbar />
-      <main>
+      <main className="relative">
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
@@ -25,3 +27,4 @@ const Index = () => {
 };
 
 export default Index;
+

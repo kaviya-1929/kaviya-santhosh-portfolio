@@ -13,11 +13,33 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState<string>("#home");
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 16);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Active section highlighting via IntersectionObserver
+  useEffect(() => {
+    const ids = ["home", ...navLinks.map((l) => l.href.slice(1))];
+    const sections = ids
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => !!el);
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActive(`#${visible.target.id}`);
+      },
+      { rootMargin: "-40% 0px -50% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] }
+    );
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
   }, []);
 
   const handleClick = (href: string) => {
@@ -48,15 +70,27 @@ const Navbar = () => {
         </button>
 
         <div className="hidden md:flex items-center">
-          {navLinks.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => handleClick(link.href)}
-              className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-secondary/60"
-            >
-              {link.label}
-            </button>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = active === link.href;
+            return (
+              <button
+                key={link.href}
+                onClick={() => handleClick(link.href)}
+                className={`relative px-3 py-1.5 text-sm transition-colors rounded-full hover:bg-secondary/60 ${
+                  isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-active"
+                    className="absolute inset-0 rounded-full bg-secondary/80 border border-border"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+                <span className="relative">{link.label}</span>
+              </button>
+            );
+          })}
         </div>
 
         <button
