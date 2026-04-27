@@ -15,7 +15,7 @@ interface Role {
 const roles: Role[] = [
   {
     year: "2025",
-    period: "Oct 2025 — Present",
+    period: "Oct 2025 — Jan 2026",
     title: "Software Development Engineer · II",
     company: "Kapture CX",
     context:
