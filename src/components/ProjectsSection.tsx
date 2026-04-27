@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { useClickShake } from "@/hooks/useClickShake";
 
 const projects = [
   {
@@ -35,7 +36,15 @@ const fadeUp = {
   transition: { duration: 0.6, ease: [0.2, 0.8, 0.2, 1] as [number, number, number, number] },
 };
 
+const popIn = {
+  initial: { opacity: 0, y: 30, scale: 0.9 },
+  whileInView: { opacity: 1, y: 0, scale: 1 },
+  viewport: { once: true, margin: "-60px" },
+  transition: { duration: 0.55, ease: [0.2, 0.8, 0.2, 1] as [number, number, number, number] },
+};
+
 const ProjectsSection = () => {
+  const onShake = useClickShake();
   return (
     <section id="projects" className="py-24 lg:py-32 relative">
       <div className="section-container">
@@ -57,8 +66,9 @@ const ProjectsSection = () => {
             <motion.a
               key={p.title}
               href={p.href ?? undefined}
-              {...fadeUp}
-              transition={{ ...fadeUp.transition, delay: Math.min(i * 0.08, 0.3) }}
+              onClick={onShake}
+              {...popIn}
+              transition={{ ...popIn.transition, delay: Math.min(i * 0.1, 0.35) }}
               className={`group surface-card lift-on-hover p-7 sm:p-8 flex flex-col ${
                 i === 0 ? "md:col-span-2 md:flex-row md:items-center md:gap-10" : ""
               }`}

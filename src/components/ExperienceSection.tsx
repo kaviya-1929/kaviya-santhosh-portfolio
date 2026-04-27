@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { useClickShake } from "@/hooks/useClickShake";
 
 interface Role {
   year: string;
@@ -102,7 +103,15 @@ const fadeUp = {
   transition: { duration: 0.6, ease: [0.2, 0.8, 0.2, 1] as [number, number, number, number] },
 };
 
+const popIn = {
+  initial: { opacity: 0, y: 30, scale: 0.9 },
+  whileInView: { opacity: 1, y: 0, scale: 1 },
+  viewport: { once: true, margin: "-60px" },
+  transition: { duration: 0.6, ease: [0.2, 0.8, 0.2, 1] as [number, number, number, number] },
+};
+
 const ExperienceSection = () => {
+  const onShake = useClickShake();
   return (
     <section id="experience" className="py-24 lg:py-32 relative overflow-hidden">
       {/* ambient background */}
@@ -147,8 +156,8 @@ const ExperienceSection = () => {
               return (
                 <motion.li
                   key={`${role.company}-${role.title}`}
-                  {...fadeUp}
-                  transition={{ ...fadeUp.transition, delay: Math.min(i * 0.06, 0.25) }}
+                  {...popIn}
+                  transition={{ ...popIn.transition, delay: Math.min(i * 0.08, 0.35) }}
                   className="relative grid lg:grid-cols-[6rem_1.25rem_1fr] gap-6 lg:gap-8 items-start"
                 >
                   {/* Year rail */}
@@ -171,6 +180,7 @@ const ExperienceSection = () => {
 
                   {/* Case-study card */}
                   <article
+                    onClick={onShake}
                     className={`surface-card lift-on-hover p-6 sm:p-8 lg:p-9 ${
                       flip ? "lg:ml-8" : "lg:mr-8"
                     }`}
