@@ -202,31 +202,6 @@ const ContactSection = () => {
             </div>
           </motion.div>
         </div>
-
-                <div className="flex items-center justify-between gap-4 pt-2">
-                  <p className="text-xs text-muted-foreground">I usually reply within 24h.</p>
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium btn-accent disabled:opacity-60"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <Loader2 size={14} className="animate-spin" />
-                        Sending
-                      </>
-                    ) : (
-                      <>
-                        Send message
-                        <Send size={14} />
-                      </>
-                    )}
-                  </button>
-                </div>
-              </form>
-            </div>
-          </motion.div>
-        </div>
       </div>
     </section>
   );
