@@ -57,6 +57,32 @@ const BackgroundOrbs = () => {
         <div className="w-full h-full rounded-full bg-[hsl(220_85%_55%/0.12)] blur-[130px]" />
       </motion.div>
 
+      {/* Small floating color balls */}
+      {!reduce && (
+        <>
+          <div
+            className="absolute top-[18%] left-[12%] w-24 h-24 rounded-full blur-2xl opacity-60"
+            style={{ background: "hsl(190 90% 60% / 0.35)", animation: "orb-float-a 14s ease-in-out infinite" }}
+          />
+          <div
+            className="absolute top-[55%] left-[70%] w-20 h-20 rounded-full blur-2xl opacity-50"
+            style={{ background: "hsl(280 85% 65% / 0.32)", animation: "orb-float-b 18s ease-in-out infinite" }}
+          />
+          <div
+            className="absolute top-[78%] left-[22%] w-28 h-28 rounded-full blur-2xl opacity-50"
+            style={{ background: "hsl(330 85% 65% / 0.28)", animation: "orb-float-c 20s ease-in-out infinite" }}
+          />
+          <div
+            className="absolute top-[35%] left-[55%] w-16 h-16 rounded-full blur-2xl opacity-50"
+            style={{ background: "hsl(150 80% 60% / 0.30)", animation: "orb-float-a 22s ease-in-out infinite reverse" }}
+          />
+          <div
+            className="absolute top-[8%] left-[75%] w-20 h-20 rounded-full blur-2xl opacity-50"
+            style={{ background: "hsl(45 95% 65% / 0.28)", animation: "orb-float-b 16s ease-in-out infinite" }}
+          />
+        </>
+      )}
+
       {/* Faint grain mask to keep things premium */}
       <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)] opacity-[0.35]" />
     </div>
