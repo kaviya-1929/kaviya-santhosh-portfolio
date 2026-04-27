@@ -14,15 +14,16 @@ const BackgroundOrbs = () => {
   const y3 = useTransform(scrollYProgress, [0, 1], [0, -60]);
 
   // Slow drift — gives a quiet "alive" feeling
+  const ease = [0.42, 0, 0.58, 1] as [number, number, number, number];
   const driftA = reduce
     ? {}
-    : { animate: { x: [0, 30, -10, 0], y: [0, -20, 10, 0] }, transition: { duration: 22, repeat: Infinity, ease: "easeInOut" } };
+    : { animate: { x: [0, 30, -10, 0], y: [0, -20, 10, 0] }, transition: { duration: 22, repeat: Infinity, ease } };
   const driftB = reduce
     ? {}
-    : { animate: { x: [0, -25, 15, 0], y: [0, 15, -10, 0] }, transition: { duration: 28, repeat: Infinity, ease: "easeInOut" } };
+    : { animate: { x: [0, -25, 15, 0], y: [0, 15, -10, 0] }, transition: { duration: 28, repeat: Infinity, ease } };
   const driftC = reduce
     ? {}
-    : { animate: { x: [0, 20, -20, 0], y: [0, -15, 5, 0] }, transition: { duration: 32, repeat: Infinity, ease: "easeInOut" } };
+    : { animate: { x: [0, 20, -20, 0], y: [0, -15, 5, 0] }, transition: { duration: 32, repeat: Infinity, ease } };
 
   return (
     <div
