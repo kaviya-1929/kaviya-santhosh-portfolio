@@ -151,9 +151,35 @@
     0 24px 60px -20px hsl(240 80% 30% / 0.25);
 }
 
-.lift-on-hover { transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.lift-on-hover { transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1); cursor: pointer; }
 .lift-on-hover:hover { transform: translateY(-3px); }
 .lift-on-hover:active { transform: translateY(-1px) scale(0.995); transition-duration: 0.1s; }
+
+/* Shake on click */
+@keyframes card-shake {
+  0%   { transform: translateX(0) rotate(0); }
+  15%  { transform: translateX(-6px) rotate(-0.6deg); }
+  30%  { transform: translateX(5px) rotate(0.5deg); }
+  45%  { transform: translateX(-4px) rotate(-0.4deg); }
+  60%  { transform: translateX(3px) rotate(0.3deg); }
+  75%  { transform: translateX(-2px) rotate(-0.2deg); }
+  100% { transform: translateX(0) rotate(0); }
+}
+.shake { animation: card-shake 0.55s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }
+
+/* Floating mini orbs */
+@keyframes orb-float-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(40px, -30px) scale(1.15); }
+}
+@keyframes orb-float-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(-35px, 25px) scale(0.9); }
+}
+@keyframes orb-float-c {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(25px, 35px) scale(1.1); }
+}
 
 /* Chip */
 .chip {
