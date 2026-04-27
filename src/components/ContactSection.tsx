@@ -72,9 +72,9 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-24 lg:py-32 relative">
       <div className="section-container">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-stretch">
-          {/* Left — closing line */}
-          <motion.div {...fadeUp} className="lg:col-span-5 flex">
+        <div className="grid lg:grid-cols-10 gap-8 lg:gap-12 items-stretch">
+          {/* Left — closing line (~40%) */}
+          <motion.div {...fadeUp} className="lg:col-span-4 flex">
             <div className="flex flex-col w-full h-full p-7 sm:p-9 rounded-[var(--radius)] border border-border bg-card/40">
               <div>
                 <div className="eyebrow mb-4">Contact</div>
@@ -122,11 +122,11 @@ const ContactSection = () => {
             </div>
           </motion.div>
 
-          {/* Right — form */}
+          {/* Right — form (~60%) */}
           <motion.div
             {...fadeUp}
             transition={{ ...fadeUp.transition, delay: 0.1 }}
-            className="lg:col-span-7 flex"
+            className="lg:col-span-6 flex"
           >
             <div className="surface-card p-7 sm:p-9 w-full h-full flex flex-col">
               <form onSubmit={handleSubmit} className="flex flex-col h-full space-y-5">
