@@ -221,3 +221,26 @@
   background: hsl(240 80% 60% / 0.35);
   color: hsl(210 20% 98%);
 }
+
+/* Contact form polish */
+.form-card {
+  background:
+    linear-gradient(180deg, hsl(230 14% 10% / 0.92), hsl(230 14% 7% / 0.92));
+  border: 1px solid hsl(240 30% 22%);
+  box-shadow:
+    0 1px 0 hsl(220 20% 100% / 0.05) inset,
+    0 20px 60px -24px hsl(265 80% 40% / 0.35),
+    0 8px 24px -12px hsl(190 80% 40% / 0.20);
+}
+.form-card:hover {
+  border-color: hsl(265 60% 45%);
+  box-shadow:
+    0 1px 0 hsl(220 20% 100% / 0.07) inset,
+    0 28px 80px -24px hsl(265 80% 50% / 0.45),
+    0 10px 30px -12px hsl(190 80% 50% / 0.25);
+}
+
+/* Input focus glow */
+input:focus-visible, textarea:focus-visible {
+  box-shadow: 0 0 0 3px hsl(240 80% 60% / 0.18);
+}
