@@ -89,8 +89,8 @@ const BackgroundOrbs = () => {
         />
       ))}
 
-      {/* Soft mask for premium feel */}
-      <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black_55%,transparent_100%)] opacity-[0.5]" />
+      {/* very faint vignette */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_60%,hsl(230_15%_6%/0.4)_100%)]" />
     </div>
   );
 };
