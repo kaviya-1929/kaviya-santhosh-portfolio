@@ -72,19 +72,19 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-24 lg:py-32 relative">
       <div className="section-container">
-        <div className="grid lg:grid-cols-10 gap-8 lg:gap-12 items-stretch">
-          {/* Left — closing line (~40%) */}
-          <motion.div {...fadeUp} className="lg:col-span-4 flex">
-            <div className="flex flex-col w-full h-full p-7 sm:p-9 rounded-[var(--radius)] border border-border bg-card/40">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+          {/* Left — closing line (expanded, no outline) */}
+          <motion.div {...fadeUp} className="lg:col-span-7 flex">
+            <div className="flex flex-col w-full h-full">
               <div>
                 <div className="eyebrow mb-4">Contact</div>
-                <h2 className="text-4xl sm:text-5xl font-bold tracking-[-0.02em] gradient-text leading-[1.05]">
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-[-0.02em] gradient-text leading-[1.05]">
                   Open to backend roles where I can build{" "}
                   <span className="font-serif-display italic accent-text font-normal">
                     scalable systems.
                   </span>
                 </h2>
-                <p className="mt-6 text-base text-muted-foreground leading-relaxed max-w-md">
+                <p className="mt-6 text-base text-muted-foreground leading-relaxed max-w-lg">
                   Have a role, a project, or just want to chat about backend systems? I'd love to hear from you.
                 </p>
               </div>
