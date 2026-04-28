@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useClickShake } from "@/hooks/useClickShake";
 
 const groups = [
   {
@@ -28,7 +27,6 @@ const fadeUp = {
 };
 
 const SkillsSection = () => {
-  const onShake = useClickShake();
   return (
     <section id="skills" className="py-24 lg:py-32 relative">
       <div className="section-container">
@@ -59,11 +57,7 @@ const SkillsSection = () => {
                 </div>
                 <div className="sm:col-span-9 flex flex-wrap gap-2">
                   {g.items.map((it) => (
-                    <span
-                      key={it}
-                      onClick={onShake}
-                      className="chip cursor-pointer hover:-translate-y-0.5 transition-transform"
-                    >
+                    <span key={it} className="chip">
                       {it}
                     </span>
                   ))}
