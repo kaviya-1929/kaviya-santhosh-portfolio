@@ -128,8 +128,22 @@ const ContactSection = () => {
             transition={{ ...fadeUp.transition, delay: 0.1 }}
             className="lg:col-span-5 flex"
           >
-            <div className="surface-card p-6 sm:p-7 w-full h-full flex flex-col">
-              <form onSubmit={handleSubmit} className="flex flex-col h-full space-y-5">
+            <div className="surface-card form-card p-6 sm:p-7 w-full h-full flex flex-col relative overflow-hidden">
+              {/* decorative gradient ring */}
+              <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 w-56 h-56 rounded-full bg-[radial-gradient(circle,hsl(265_90%_65%/0.25),transparent_70%)] blur-2xl" />
+              <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-24 w-56 h-56 rounded-full bg-[radial-gradient(circle,hsl(190_95%_60%/0.20),transparent_70%)] blur-2xl" />
+
+              <div className="mb-5 flex items-center justify-between relative">
+                <div>
+                  <h3 className="text-2xl font-bold tracking-tight gradient-text">Contact me</h3>
+                  <p className="text-xs text-muted-foreground mt-1">Drop a note — I read every message.</p>
+                </div>
+                <span className="inline-flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-[0.18em] text-muted-foreground">
+                  <span className="status-dot" /> Available
+                </span>
+              </div>
+
+              <form onSubmit={handleSubmit} className="flex flex-col h-full space-y-5 relative">
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-xs font-mono uppercase tracking-[0.15em] text-muted-foreground">
                     Name
