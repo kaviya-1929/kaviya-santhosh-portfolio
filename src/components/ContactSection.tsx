@@ -130,36 +130,35 @@ const ContactSection = () => {
           >
             <div className="surface-card p-6 sm:p-7 w-full h-full flex flex-col">
               <form onSubmit={handleSubmit} className="flex flex-col h-full space-y-5">
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div className="space-y-2">
-                    <Label htmlFor="name" className="text-xs font-mono uppercase tracking-[0.15em] text-muted-foreground">
-                      Name
-                    </Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      placeholder="Your name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="bg-surface border-border h-11 focus:border-primary focus:ring-0 transition-colors"
-                    />
-                    {errors.name && <p className="text-xs text-destructive">{errors.name}</p>}
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="text-xs font-mono uppercase tracking-[0.15em] text-muted-foreground">
-                      Email
-                    </Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="you@email.com"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="bg-surface border-border h-11 focus:border-primary focus:ring-0 transition-colors"
-                    />
-                    {errors.email && <p className="text-xs text-destructive">{errors.email}</p>}
-                  </div>
+                <div className="space-y-2">
+                  <Label htmlFor="name" className="text-xs font-mono uppercase tracking-[0.15em] text-muted-foreground">
+                    Name
+                  </Label>
+                  <Input
+                    id="name"
+                    name="name"
+                    placeholder="Your name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="bg-surface border-border h-11 focus:border-primary focus:ring-0 transition-colors"
+                  />
+                  {errors.name && <p className="text-xs text-destructive">{errors.name}</p>}
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-xs font-mono uppercase tracking-[0.15em] text-muted-foreground">
+                    Email
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="you@email.com"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="bg-surface border-border h-11 focus:border-primary focus:ring-0 transition-colors"
+                  />
+                  {errors.email && <p className="text-xs text-destructive">{errors.email}</p>}
                 </div>
 
                 <div className="space-y-2 flex-1 flex flex-col">
