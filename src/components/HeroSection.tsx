@@ -31,11 +31,9 @@ const HeroSection = () => {
               {...fadeUp(0.05)}
               className="text-[2.75rem] sm:text-6xl lg:text-7xl font-bold leading-[1.02] tracking-[-0.03em] mb-6"
             >
-              <span className="gradient-text">I build backend</span>
-              <br />
-              <span className="gradient-text">systems that </span>
+              <span className="gradient-text">I build backend systems that</span>{" "}
               <span className="font-serif-display italic accent-text font-normal">
-                scale.
+                handle real-world traffic and production scale.
               </span>
             </motion.h1>
 
@@ -76,7 +74,7 @@ const HeroSection = () => {
               <div className="w-px h-8 bg-border" />
               <div>
                 <div className="text-foreground text-xl font-semibold tracking-tight">Java</div>
-                <div className="mt-0.5">Spring Boot · MS</div>
+                <div className="mt-0.5">Spring Boot · Microservices</div>
               </div>
               <div className="w-px h-8 bg-border" />
               <div>
@@ -106,7 +104,7 @@ const HeroSection = () => {
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="text-xs font-mono text-muted-foreground mb-1">Currently</div>
                     <div className="text-sm font-medium text-foreground">
-                      SDE-II · Backend
+                      Software Development Engineer II (Backend)
                     </div>
                   </div>
                 </div>
@@ -119,10 +117,10 @@ const HeroSection = () => {
                 transition={{ delay: 0.6 }}
                 className="absolute -left-6 top-10 hidden sm:flex items-center gap-2 surface-card px-3 py-2"
               >
-                <div className="w-7 h-7 rounded-full bg-primary/15 flex items-center justify-center text-primary text-xs font-bold">JS</div>
+                <div className="w-7 h-7 rounded-full bg-primary/15 flex items-center justify-center text-primary text-[9px] font-bold text-center leading-tight px-1">API</div>
                 <div>
-                  <div className="text-[10px] font-mono text-muted-foreground">Located</div>
-                  <div className="text-xs font-medium">Coimbatore, IN</div>
+                  <div className="text-[10px] font-mono text-muted-foreground">Focus</div>
+                  <div className="text-xs font-medium">Backend · APIs · Integrations</div>
                 </div>
               </motion.div>
 
