@@ -10,7 +10,7 @@ import BackgroundOrbs from "@/components/BackgroundOrbs";
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen bg-background text-foreground">
+    <div className="relative min-h-screen text-foreground">
       <BackgroundOrbs />
       <Navbar />
       <main className="relative">
