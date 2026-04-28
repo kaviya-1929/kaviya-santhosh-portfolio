@@ -43,9 +43,9 @@ const HeroSection = () => {
               {...fadeUp(0.15)}
               className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl mb-10"
             >
-              Software Development Engineer with 2+ years building Java &amp; Spring Boot
-              microservices for enterprise CX platforms — designing high-throughput APIs,
-              owning P0/P1 incidents, and shipping integrations that stay reliable in production.
+              Backend-focused Software Development Engineer with 2+ years of experience
+              building scalable Java and Spring Boot microservices, delivering high-throughput
+              APIs and reliable integrations for enterprise-grade CX platforms.
             </motion.p>
 
             <motion.div {...fadeUp(0.25)} className="flex flex-wrap items-center gap-3">
