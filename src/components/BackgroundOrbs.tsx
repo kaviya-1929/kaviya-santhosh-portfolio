@@ -22,16 +22,18 @@ const BackgroundOrbs = () => {
           transition: { duration: dur, repeat: Infinity, ease },
         };
 
-  // Colorful bubbles — vibrant tech palette
+  // Colorful bubbles — vibrant tech palette (larger, brighter)
   const bubbles = [
-    { c: "330 90% 65%", size: 70, top: "12%", left: "8%", dur: 14, dx: 40, dy: 30 },   // pink
-    { c: "190 95% 60%", size: 50, top: "22%", left: "82%", dur: 18, dx: -50, dy: 25 }, // cyan
-    { c: "265 90% 70%", size: 90, top: "55%", left: "15%", dur: 22, dx: 35, dy: -40 }, // violet
-    { c: "150 80% 55%", size: 60, top: "70%", left: "78%", dur: 16, dx: -30, dy: 35 }, // green
-    { c: "40 95% 60%",  size: 45, top: "38%", left: "48%", dur: 20, dx: 45, dy: -25 }, // amber
-    { c: "210 95% 65%", size: 75, top: "85%", left: "35%", dur: 24, dx: -40, dy: -30 },// blue
-    { c: "300 85% 65%", size: 40, top: "8%",  left: "55%", dur: 17, dx: 30, dy: 40 },  // magenta
-    { c: "170 85% 55%", size: 55, top: "62%", left: "55%", dur: 19, dx: -35, dy: 30 }, // teal
+    { c: "330 95% 65%", size: 110, top: "10%", left: "6%",  dur: 14, dx: 60, dy: 40 },  // pink
+    { c: "190 95% 60%", size: 90,  top: "20%", left: "84%", dur: 18, dx: -70, dy: 35 }, // cyan
+    { c: "265 95% 70%", size: 140, top: "52%", left: "12%", dur: 22, dx: 55, dy: -50 }, // violet
+    { c: "150 90% 55%", size: 100, top: "72%", left: "80%", dur: 16, dx: -45, dy: 50 }, // green
+    { c: "40 100% 60%", size: 80,  top: "38%", left: "46%", dur: 20, dx: 65, dy: -35 }, // amber
+    { c: "210 95% 65%", size: 120, top: "86%", left: "32%", dur: 24, dx: -55, dy: -40 },// blue
+    { c: "300 95% 65%", size: 70,  top: "6%",  left: "55%", dur: 17, dx: 45, dy: 55 },  // magenta
+    { c: "170 90% 55%", size: 95,  top: "60%", left: "58%", dur: 19, dx: -50, dy: 45 }, // teal
+    { c: "20 95% 62%",  size: 75,  top: "30%", left: "30%", dur: 21, dx: 50, dy: -30 }, // orange
+    { c: "240 95% 70%", size: 85,  top: "78%", left: "55%", dur: 23, dx: -40, dy: 40 }, // indigo
   ];
 
   return (
