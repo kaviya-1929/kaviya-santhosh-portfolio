@@ -122,13 +122,13 @@ const ContactSection = () => {
             </div>
           </motion.div>
 
-          {/* Right — form (~60%) */}
+          {/* Right — form (compact) */}
           <motion.div
             {...fadeUp}
             transition={{ ...fadeUp.transition, delay: 0.1 }}
-            className="lg:col-span-6 flex"
+            className="lg:col-span-5 flex"
           >
-            <div className="surface-card p-7 sm:p-9 w-full h-full flex flex-col">
+            <div className="surface-card p-6 sm:p-7 w-full h-full flex flex-col">
               <form onSubmit={handleSubmit} className="flex flex-col h-full space-y-5">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
