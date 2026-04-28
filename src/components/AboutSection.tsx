@@ -9,9 +9,9 @@ const fadeUp = {
 
 const focusAreas = [
   { k: "Backend", v: "Java · Spring Boot · Microservices" },
-  { k: "Scale", v: "High-traffic APIs · Performance tuning" },
+  { k: "Scale", v: "High-traffic APIs · Performance Optimization" },
   { k: "Integrations", v: "WhatsApp · Call · Email · CRM" },
-  { k: "Reliability", v: "P0/P1 ownership · Production debugging" },
+  { k: "Reliability", v: "Production Systems · Debugging · Incident Resolution" },
 ];
 
 const AboutSection = () => {
@@ -24,9 +24,9 @@ const AboutSection = () => {
             <div className="lg:sticky lg:top-28">
               <div className="eyebrow mb-4">About</div>
               <h2 className="text-4xl sm:text-5xl font-bold tracking-[-0.02em] gradient-text">
-                Engineer focused on{" "}
+                Backend engineer focused on{" "}
                 <span className="font-serif-display italic accent-text font-normal">
-                  what ships.
+                  building reliable production systems.
                 </span>
               </h2>
             </div>
@@ -36,16 +36,18 @@ const AboutSection = () => {
           <div className="lg:col-span-8 space-y-10">
             <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.1 }}>
               <p className="text-lg text-foreground/90 leading-relaxed">
-                Backend-focused SDE with{" "}
-                <span className="text-foreground font-semibold">2+ years</span> shipping
-                microservices in production for high-traffic enterprise CX platforms. I design
-                RESTful APIs, tune performance, and keep critical services reliable under load.
+                Backend-focused Software Development Engineer with{" "}
+                <span className="text-foreground font-semibold">2+ years</span> of experience
+                building and scaling microservices in production for high-traffic enterprise
+                CX platforms. I design RESTful APIs, optimize performance, and ensure systems
+                remain stable under real-world load.
               </p>
               <p className="mt-5 text-base text-muted-foreground leading-relaxed">
-                My day-to-day spans real integrations — Meta WhatsApp Business APIs, telephony,
-                email, and CRM workflows — plus chatbot automation that removes manual work.
-                I write clean, maintainable code and own systems end-to-end, from design through
-                P0/P1 resolution.
+                My work includes integrating communication platforms such as Meta WhatsApp
+                Business APIs, telephony, email, and CRM workflows, along with building
+                chatbot-driven automation to streamline customer interactions. I focus on
+                writing clean, maintainable code and owning systems end-to-end — from
+                development to resolving critical production issues.
               </p>
             </motion.div>
 

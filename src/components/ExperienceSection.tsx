@@ -19,14 +19,14 @@ const roles: Role[] = [
     title: "Software Development Engineer · II",
     company: "Kapture CX",
     context:
-      "Designing and scaling microservices for a high-traffic enterprise CX platform serving real-time customer interactions across enterprise tenants.",
+      "Designed and scaled microservices for a high-traffic enterprise CX platform handling real-time customer interactions across enterprise tenants.",
     highlights: [
       { label: "Owned", value: "P0 / P1 incident response" },
       { label: "Shipped", value: "WhatsApp · Telephony · Email" },
-      { label: "Stack", value: "Java · Spring Boot · MS" },
+      { label: "Stack", value: "Java · Spring Boot · Microservices" },
     ],
     outcome:
-      "Led integrations across Meta WhatsApp Business APIs, telephony, and email within the CRM, plus chatbot-driven automation that removes manual ops. Drove root-cause to recovery on production incidents with minimal downtime.",
+      "Led integrations across Meta WhatsApp Business APIs, telephony, and email within the CRM, and built chatbot-driven automation to reduce manual operations. Owned production incident resolution from root cause to recovery with minimal downtime.",
     tech: ["Java", "Spring Boot", "Microservices", "REST", "WhatsApp API", "Telephony", "CRM"],
   },
   {

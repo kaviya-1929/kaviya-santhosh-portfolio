@@ -4,9 +4,9 @@ import { ArrowUpRight } from "lucide-react";
 const projects = [
   {
     n: "01",
-    title: "College Stack-Based Web App",
+    title: "College Stack App",
     description:
-      "A responsive web application implementing a stack-based workflow for clean data handling and an intuitive end-user experience.",
+      "Built a web application using a stack-based workflow to handle structured data operations efficiently and improve user interaction.",
     tech: ["HTML", "CSS", "JavaScript"],
     href: "#",
   },
@@ -20,9 +20,9 @@ const projects = [
   },
   {
     n: "03",
-    title: "Voice-Controlled Home Automation",
+    title: "Home Automation",
     description:
-      "Smart home system that uses voice recognition to control devices and appliances through natural commands.",
+      "Developed a voice-controlled IoT system enabling real-time device control through speech recognition and automation logic.",
     tech: ["IoT", "Voice Recognition", "Automation"],
     href: null,
   },

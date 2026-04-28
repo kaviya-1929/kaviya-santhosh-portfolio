@@ -39,7 +39,7 @@ const SkillsSection = () => {
                 <span className="font-serif-display italic accent-text font-normal">trust.</span>
               </h2>
               <p className="mt-5 text-sm text-muted-foreground leading-relaxed max-w-sm">
-                Tools and practices I reach for daily to ship reliable backend systems.
+                Technologies and practices I use to build scalable backend systems.
               </p>
             </div>
           </motion.div>
