@@ -4,7 +4,8 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/kaviya-santhosh-portfolio/", // 👈 add this
+  base: mode === "production" ? "/kaviya-santhosh-portfolio/" : "/",
+
 
   server: {
     host: "::",
