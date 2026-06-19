@@ -4,6 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
+  base: '/kaviya-santhosh-portfolio/',
   test: {
     environment: "jsdom",
     globals: true,
