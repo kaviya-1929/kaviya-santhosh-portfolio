@@ -4,7 +4,9 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/kaviya-santhosh-portfolio/" : "/",
+  // Use relative production assets so both Lovable's root URL and
+  // GitHub Pages subfolder deploys can load the same build.
+  base: mode === "production" ? "./" : "/",
 
 
   server: {
