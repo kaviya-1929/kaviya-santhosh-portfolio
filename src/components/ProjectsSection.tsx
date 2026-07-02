@@ -4,6 +4,14 @@ import { ArrowUpRight } from "lucide-react";
 const projects = [
   {
     n: "01",
+    title: "KapRewardsSystem",
+    description:
+      "Backend REST APIs for an employee rewards and recognition platform. Implemented business logic to calculate and assign reward points from completed support tickets, built CRUD APIs for reward management, employee rewards, and reward history, and integrated with the React.js frontend. Added input validation, exception handling, and Postman-based API testing while collaborating in an Agile team on code reviews, bug fixes, and production support.",
+    tech: ["Java", "Spring Boot", "REST APIs", "React.js", "MySQL", "Git"],
+    href: null,
+  },
+  {
+    n: "02",
     title: "College Stack App",
     description:
       "Built a web application using a stack-based workflow to handle structured data operations efficiently and improve user interaction.",
@@ -11,7 +19,7 @@ const projects = [
     href: "#",
   },
   {
-    n: "02",
+    n: "03",
     title: "Buck-Boost Converter",
     description:
       "Designed and implemented a buck-boost converter circuit for efficient voltage regulation in electronic devices.",
@@ -19,7 +27,7 @@ const projects = [
     href: null,
   },
   {
-    n: "03",
+    n: "04",
     title: "Home Automation",
     description:
       "Developed a voice-controlled IoT system enabling real-time device control through speech recognition and automation logic.",
