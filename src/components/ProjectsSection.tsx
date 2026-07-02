@@ -68,10 +68,10 @@ const ProjectsSection = () => {
               {...fadeUp}
               transition={{ ...fadeUp.transition, delay: Math.min(i * 0.08, 0.3) }}
               className={`group surface-card lift-on-hover p-7 sm:p-8 flex flex-col ${
-                i === 0 ? "md:col-span-2 md:flex-row md:items-center md:gap-10" : ""
+                i < 2 ? "md:col-span-2 md:flex-row md:items-center md:gap-10" : ""
               }`}
             >
-              <div className={`flex items-start justify-between gap-4 mb-6 ${i === 0 ? "md:mb-0 md:flex-col md:items-start md:w-32" : ""}`}>
+              <div className={`flex items-start justify-between gap-4 mb-6 ${i < 2 ? "md:mb-0 md:flex-col md:items-start md:w-32" : ""}`}>
                 <span className="text-xs font-mono text-muted-foreground tracking-widest">
                   {p.n}
                 </span>
